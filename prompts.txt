@@ -1,10 +1,10 @@
 # Figma MCP Example Workflow
 
 ### Get figma file and describe it
-Please connect to the figma file with the id By102wZ9ERwZKhAV7Vujvh and describe me briefly what you can see.
+Please connect to the figma file with the id By102wZ9ERwZKhAV7Vujvh and describe me very briefly what you can see, without mention details.
 
 ### Get design tokens
-What design tokens are available?
+What design tokens are available? Use get_vget_variable_defs for this task.
 
 Sort them into the following categories:
 
@@ -12,14 +12,18 @@ Sort them into the following categories:
 2. Global Semantics
 3. Components
 
+Follow these rules: 
+- Do not invent new design tokens; only add design tokens that are intended and exist in the figma variables.
+- Keep the original variable names and possible links between them, but remove the „—components“ prefix for component related variables.
+
 ### Create theme
 
 Create a tailwind v4 theme in @theme.css with these design tokens in a single @theme block. Use the previous category structure.
 
 Follow these rules:
-- Keep the original variable names and possible links between them, but remove the „—components“ prefix for component related variables.
 - Use tailwind best practices/naming conventions and overwrite tailwind default values when it makes sense. Example: Instead of --font-size-12: 12ox, use --text-xs: 12px
 - When a component variable can be used as a global primitive or semantic design token, add them to the global primitives or semantics category and link them in the component design token.
+- Do not create new spacing variables, keep the default tailwind 4px grid as foundation.
 - Do not create helper classes or other utility code. Do not invent new variables or classes.
 
 Additional information:
