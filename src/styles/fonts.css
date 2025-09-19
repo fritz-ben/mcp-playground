@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "GT Planar";
+  src: url("../assets/fonts/GT-Planar-VF.woff2") format("woff2-variations");
+  font-weight: 100 900; /* Variable font weight range */
+  font-style: normal;
+  font-display: swap; /* Better loading performance */
+}
+
+/* Optional: Define font weight variations for easier use */
+.font-gt-planar {
+  font-family: "GT Planar", system-ui, -apple-system, sans-serif;
+}
+
+.font-gt-planar-light {
+  font-family: "GT Planar", system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+}
+
+.font-gt-planar-regular {
+  font-family: "GT Planar", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-variation-settings: "slnt" 30;
+  transition: font-variation-settings 0.3s ease;
+}
+
+.font-gt-planar-medium {
+  font-family: "GT Planar", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-variation-settings: "slnt" 30;
+  transition: font-variation-settings 0.3s ease;
+}
+
+.font-gt-planar-bold {
+  font-family: "GT Planar", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "slnt" 30;
+  transition: font-variation-settings 0.3s ease;
+}
+
+.font-gt-planar-regular:hover {
+  font-variation-settings: "slnt" -30;
+}
+
+.font-gt-planar-medium:hover {
+  font-variation-settings: "slnt" -30;
+}
+
+.font-gt-planar-bold:hover {
+  font-variation-settings: "slnt" -30;
+}

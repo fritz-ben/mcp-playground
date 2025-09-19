@@ -1,29 +1,30 @@
 # Figma MCP Example Workflow
 
 ### Get figma file and describe it
-Please connect to the figma file with the id By102wZ9ERwZKhAV7Vujvh and describe me very briefly what you can see, without mention details.
+Please connect to the figma file with the id LcBkkRdhwy8fI5xfA5rQUm and look at the pages 0-1 and 1-95. Describe me very briefly what you can see, without mention details. Did Steffen a good design job?
 
 ### Get design tokens
-What design tokens are available? Use get_vget_variable_defs for this task.
+What design tokens are available? Use get_variable_defs for this task.
 
 Sort them into the following categories:
 
-1. Global Primitives
-2. Global Semantics
-3. Components
+1. Primitives
+2. Semantics
+3. Text Styles
+4. Components
 
 Follow these rules: 
 - Do not invent new design tokens; only add design tokens that are intended and exist in the figma variables.
-- Keep the original variable names and possible links between them, but remove the „—components“ prefix for component related variables.
+- Keep the original variable names and possible links between them, but remove the „components“ prefix for component related variables.
 
 ### Create theme
 
-Create a tailwind v4 theme in @theme.css with these design tokens in a single @theme block. Use the previous category structure.
+Create a tailwind v4 theme in @theme.css with these design tokens in a single @theme block. Use the previous category structure. Create text style utility classes in @typo.css.
 
 Follow these rules:
-- Use tailwind best practices/naming conventions and overwrite tailwind default values when it makes sense. Example: Instead of --font-size-12: 12ox, use --text-xs: 12px
+- Use tailwind best practices/naming conventions and overwrite tailwind default values when it makes sense, but don't change the name of colors. Example: Instead of --font-size-12: 12px, use --text-xs: 12px or instead of --font-family-sans: Inter, use --font-sans: Inter
 - When a component variable can be used as a global primitive or semantic design token, add them to the global primitives or semantics category and link them in the component design token.
-- Do not create new spacing variables, keep the default tailwind 4px grid as foundation.
+- Do not create new spacing variables; stick to Tailwind's standard grid with 4 px as the basis.
 - Do not create helper classes or other utility code. Do not invent new variables or classes.
 
 Additional information:
@@ -31,26 +32,50 @@ Additional information:
 
 // Only the values of the current mode are available.
 
--
+***
 
-Compare your result with the figma file variables. Are there any mismatches or missing design tokens?
+Compare your result with the variables in the Figma file. Are there any discrepancies or missing design tokens?
 
 ### Create button component
 
 Let's take a closer look at the “Button” component instance. Describe it.
 
--
+***
 
-Show me the code using the get_code tool. 
+Show me the exact code that the ‘get_code’ tool returns.
 
-- 
+***
 
-Take all the information about the Button component instance and create a production-ready component in @components/Button.tsx.
+Take all the information about the Button component instance and create a production-ready component in @/components/Button.tsx. Only implement the variants and states that are present in figma.
 
 Follow these rules:
-- Implement the design with tailwind classes
-- Use our design tokens from @theme.css where possible: Example: Instead of text-[#d84799] use bg-(--button-text-color)
+- Implement the design with tailwind v4
+- Where possible, use our design tokens from @theme.css: Example: Instead of text-[#d84799] use bg-(--button-text-color)
 - Use default tailwind utility variables for pixel-based values. Example: Instead of rounded-[8px], use rounded-lg
 - Add an onClick property
 - Don't invent new variants or states. Stick as close as possible to the figma design.
 
+***
+
+Improve the maintainability of classes using CVA (Class Variance Authority) and add an outline variant to the button.
+
+***
+
+Add an icon prop to the button component using the DynamicIcon from lucide-react.
+
+***
+
+Inspect the title-2 / centered component instance and provide a detailed description of its structure and styling.
+
+***
+
+Using the provided design information, implement a Headline component in @components/Headline.tsx. The component should:
+
+- Only support the h2 level for now.
+- Apply the matching text style from the design system.
+- Include a hover effect with a smooth cubic-bezier transition.
+- Provide a property to control text alignment.
+
+***
+
+On page 13-502, implement the hero-stage directly in @src/App.tsx using our Headline and Button components. Replace the existing content and use @src/assets/images/inspire-logo.png as the hero image.

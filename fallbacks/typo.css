@@ -1,0 +1,73 @@
+/* Text Style Utility Classes */
+
+/* Font Variation Utilities */
+.slnt-positive {
+  font-variation-settings: "slnt" var(--slnt-positive);
+}
+
+.slnt-negative {
+  font-variation-settings: "slnt" var(--slnt-negative);
+}
+
+/* Title Styles */
+.title-1-italic {
+  @apply slnt-positive text-5xl/tight font-display;
+  font-weight: var(--font-normal);
+  /* figma: Title/Title-1-Italic */
+}
+
+.title-1-retalic {
+  @apply slnt-negative text-5xl/tight font-display;
+  font-weight: var(--font-normal);
+  /* figma: Title/Title-1-Retalic */
+}
+
+.title-2-italic {
+  @apply slnt-positive text-4xl/tight font-display;
+  font-weight: var(--font-normal);
+  /* figma: Title/Title-2-Italic */
+}
+
+.title-2-retalic {
+  @apply slnt-negative text-4xl/tight font-display;
+  font-weight: var(--font-normal);
+  /* figma: Title/Title-2-Retalic */
+}
+
+/* Heading Styles */
+.heading-1 {
+  @apply text-3xl/tight font-sans;
+  font-weight: var(--font-bold);
+  /* figma: Heading/Heading-1 */
+}
+
+.heading-2 {
+  @apply text-2xl/tight font-sans;
+  font-weight: var(--font-bold);
+  /* figma: Heading/Heading-2 */
+}
+
+.heading-3 {
+  @apply text-xl/tight font-sans;
+  font-weight: var(--font-bold);
+  /* figma: Heading/Heading-3 */
+}
+
+/* Body Text Styles */
+.body-large {
+  @apply text-lg/normal font-sans;
+  font-weight: var(--font-normal);
+  /* figma: Body/Body-large */
+}
+
+.body-base {
+  @apply text-base/normal font-sans;
+  font-weight: var(--font-normal);
+  /* figma: Body/Body-base */
+}
+
+.body-small {
+  @apply text-sm/normal font-sans;
+  font-weight: var(--font-normal);
+  /* figma: Body/Body-small */
+}
