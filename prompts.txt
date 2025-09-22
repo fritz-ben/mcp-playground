@@ -17,7 +17,10 @@ Sort them into the following categories:
 
 ### Create theme
 
-Create a tailwind v4 theme in @theme.css with these design tokens in a single @theme block. Use the previous category structure. Create text style utility classes in @typo.css.
+Create a tailwind v4 theme in @theme.css with these design tokens in a single @theme block. Use the previous category structure.
+
+Create text style utility classes in @typo.css.- Follow the „Tailwind Theme“ rules
+
 
 ### Create button component
 
@@ -31,16 +34,9 @@ Show me the exact code that the ‘get_code’ tool returns.
 
 Create a production-ready Button component in @/components/Button.tsx with the following requirements:
 - Include only the variants and states that exist in Figma.
+- Create a button text style in @typo.css
 - Use Class Variance Authority (CVA) to structure Tailwind classes.
-- Accept children as the button label.
-
-***
-
-Improve the maintainability of classes using CVA (Class Variance Authority) and add an outline variant to the button.
-
-***
-
-Add an icon prop to the button component using the DynamicIcon from lucide-react.
+- Accept children as the button label.- The component state should be implement with hover:- Follow the “Writing component code” rules
 
 ***
 
@@ -51,9 +47,11 @@ Inspect the title-2 / centered component instance and provide a detailed descrip
 Create a production-ready Headline component in @/components/Headline.tsx with the following requirements:
 
 - Support only the h2 level for now.
-- Apply the matching text style from @typo.css.
+- Use the existing text style from @typo.css
+- Handle the transition separate from the text styles 
 - Include the defined hover effect with a smooth cubic-bezier transition.
 - Provide a property to control text alignment.
+- Follow the “Writing component code” rules
 
 ***
 
@@ -65,3 +63,4 @@ Implement the hero-stage on page 13-502 directly in @src/App.tsx with the follow
 - Use the existing Headline and Button components.
 - Replace the existing content with the hero-stage content.
 - Use @src/assets/images/inspire-logo.png as the hero image.
+- Follow the “Writing component code” rules

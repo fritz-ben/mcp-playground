@@ -2,15 +2,15 @@
 
 ## Working with Figma MCP Server
 
-## Tailwind
+### Tailwind
+
 - Use tailwind best practices/naming conventions
 - NEVER create helper classes or other utility code when not explicit desired
 
-## Tailwind Theme
+### Tailwind Theme
+
 - Use for the theme categories this comment style: /_ ===== PRIMITIVES ===== _/
 - Use for variable groups this comment style: /_ Colors _/
-
-### Handling Theme Variables and Design Tokens
 
 - NEVER invent variables, tokens, or classes. Add only tokens from Figma.
 - Overwrite Tailwind defaults when appropriate, but never rename colors.
@@ -28,7 +28,7 @@
 - When font-variation-settings variables exist (e.g. --slnt-positive), use them in text styles via a utility class.
   EXAMPLE: Instead of "italic", create a Tailwind utility "slnt-positive" with { font-variation-settings: "slnt" var(--slnt-positive); }
 
-### Writing new code
+### Writing component code
 
 - Implement the design with tailwind v4
 - ALWAYS use design tokens from @theme.css wherever possible.
@@ -38,3 +38,4 @@
   EXAMPLE: Instead of bg-[--button-text-color], use bg-(--button-text-color).
 - ALWAYS use Tailwind default utilities for pixel-based values.
   EXAMPLE: Instead of rounded-[8px], use "rounded-lg
+- Export react components as default
