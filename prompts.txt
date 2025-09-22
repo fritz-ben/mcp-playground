@@ -51,8 +51,8 @@ Inspect the title-2 / centered component instance and provide a detailed descrip
 Create a production-ready Headline component in @/components/Headline.tsx with the following requirements:
 
 - Support only the h2 level for now.
-- Apply the matching text style from the design system.
-- Include a hover effect with a smooth cubic-bezier transition.
+- Apply the matching text style from @typo.css.
+- Include the defined hover effect with a smooth cubic-bezier transition.
 - Provide a property to control text alignment.
 
 ***

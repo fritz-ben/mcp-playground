@@ -28,11 +28,13 @@
 - When font-variation-settings variables exist (e.g. --slnt-positive), use them in text styles via a utility class.
   EXAMPLE: Instead of "italic", create a Tailwind utility "slnt-positive" with { font-variation-settings: "slnt" var(--slnt-positive); }
 
-## Write new code based on Figma MCP input
+### Writing new code
+
 - Implement the design with tailwind v4
 - ALWAYS use design tokens from @theme.css wherever possible.
 - NEVER create new components, variants, sizes, or states. ALWAYS follow the Figma design closely.
   EXAMPLE: Instead of text-[#d84799] use bg-(--button-text-color)
+- ALWAYS use the new Tailwind v4 variable syntax.
+  EXAMPLE: Instead of bg-[--button-text-color], use bg-(--button-text-color).
 - ALWAYS use Tailwind default utilities for pixel-based values.
   EXAMPLE: Instead of rounded-[8px], use "rounded-lg
-- Use bg-(--variable-name) for custom variables instead of bg-[var(--variable-name)]
