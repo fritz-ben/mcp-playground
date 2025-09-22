@@ -1,7 +1,9 @@
 # Figma MCP Example Workflow
 
 ### Get figma file and describe it
-Please connect to the figma file with the id LcBkkRdhwy8fI5xfA5rQUm and look at the pages 0-1 and 1-95. Describe me very briefly what you can see, without mention details. Did Steffen a good design job?
+Connect to the Figma file with ID LcBkkRdhwy8fI5xfA5rQUm and review pages 0-1 and 1-95.
+- Provide a very brief high-level description of what you see.
+- Give an honest opinion about Steffen’s design work.
 
 ### Get design tokens
 What design tokens are available? Use get_variable_defs for this task.
@@ -13,28 +15,9 @@ Sort them into the following categories:
 3. Text Styles
 4. Components
 
-Follow these rules: 
-- Do not invent new design tokens; only add design tokens that are intended and exist in the figma variables.
-- Keep the original variable names and possible links between them, but remove the „components“ prefix for component related variables.
-
 ### Create theme
 
 Create a tailwind v4 theme in @theme.css with these design tokens in a single @theme block. Use the previous category structure. Create text style utility classes in @typo.css.
-
-Follow these rules:
-- Use tailwind best practices/naming conventions and overwrite tailwind default values when it makes sense, but don't change the name of colors. Example: Instead of --font-size-12: 12px, use --text-xs: 12px or instead of --font-family-sans: Inter, use --font-sans: Inter
-- When a component variable can be used as a global primitive or semantic design token, add them to the global primitives or semantics category and link them in the component design token.
-- Do not create new spacing variables; stick to Tailwind's standard grid with 4 px as the basis.
-- Do not create helper classes or other utility code. Do not invent new variables or classes.
-
-Additional information:
-- All numeric values are in pixels.
-
-// Only the values of the current mode are available.
-
-***
-
-Compare your result with the variables in the Figma file. Are there any discrepancies or missing design tokens?
 
 ### Create button component
 
@@ -46,14 +29,10 @@ Show me the exact code that the ‘get_code’ tool returns.
 
 ***
 
-Take all the information about the Button component instance and create a production-ready component in @/components/Button.tsx. Only implement the variants and states that are present in figma.
-
-Follow these rules:
-- Implement the design with tailwind v4
-- Where possible, use our design tokens from @theme.css: Example: Instead of text-[#d84799] use bg-(--button-text-color)
-- Use default tailwind utility variables for pixel-based values. Example: Instead of rounded-[8px], use rounded-lg
-- Add an onClick property
-- Don't invent new variants or states. Stick as close as possible to the figma design.
+Create a production-ready Button component in @/components/Button.tsx with the following requirements:
+- Include only the variants and states that exist in Figma.
+- Use Class Variance Authority (CVA) to structure Tailwind classes.
+- Accept children as the button label.
 
 ***
 
@@ -69,13 +48,20 @@ Inspect the title-2 / centered component instance and provide a detailed descrip
 
 ***
 
-Using the provided design information, implement a Headline component in @components/Headline.tsx. The component should:
+Create a production-ready Headline component in @/components/Headline.tsx with the following requirements:
 
-- Only support the h2 level for now.
+- Support only the h2 level for now.
 - Apply the matching text style from the design system.
 - Include a hover effect with a smooth cubic-bezier transition.
 - Provide a property to control text alignment.
 
 ***
 
-On page 13-502, implement the hero-stage directly in @src/App.tsx using our Headline and Button components. Replace the existing content and use @src/assets/images/inspire-logo.png as the hero image.
+Open the page with node-id 1:99, download the image named inspire-hero-title, and save it as inspire-image in the @src/assets/images folder.
+
+***
+
+Implement the hero-stage on page 13-502 directly in @src/App.tsx with the following requirements:
+- Use the existing Headline and Button components.
+- Replace the existing content with the hero-stage content.
+- Use @src/assets/images/inspire-logo.png as the hero image.

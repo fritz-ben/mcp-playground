@@ -8,14 +8,14 @@
 
 ## Tailwind Theme
 - Use for the theme categories this comment style: /_ ===== PRIMITIVES ===== _/
-- Use for variable groups this comment stlye: /_ Colors _/
+- Use for variable groups this comment style: /_ Colors _/
 
 ### Handling Theme Variables and Design Tokens
 
 - NEVER invent variables, tokens, or classes. Add only tokens from Figma.
 - Overwrite Tailwind defaults when appropriate, but never rename colors.
   EXAMPLE: Instead of --font-size-12: 12px, use --text-xs: 12px or instead of --font-family-sans: Inter, use --font-sans: Inter
-  IMPORTANT: Use --font-weight-* for font-weight variables instead of --font-* to prevent conflicts with font-family variables, but remember that the tailwind utility class is still font-*.
+  IMPORTANT: Use --font-weight-* for font-weight variables instead of --font-* to prevent conflicts with font-family variables, but follow the tailwind convention that the tailwind utility class is still font-* (e.g. font-bold).
 - Add a comment after each variable indicating its source path and original name in figma
   EXAMPLE: --text-xs: 12px; /_ figma: path/to/variable/font-size-200 _/
 - Add missing semantic or componeont design token as primitives when not present

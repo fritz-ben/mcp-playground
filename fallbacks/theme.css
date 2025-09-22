@@ -11,14 +11,6 @@
   --color-bluish-white-100: #edf0fb; /* figma: color/color-bluish-white@100 */
   --color-bluish-white-0: #edf0fb00; /* figma: color/color-bluish-white@0 */
 
-  /* Font Families */
-  --font-sans: Inter; /* figma: type/font-family/font-family-default */
-  --font-display: "GT Planar"; /* figma: type/font-family/font-family-emphasised */
-
-  /* Font Weights */
-  --font-weight-normal: 400; /* figma: type/font-weight/font-weight-regular */
-  --font-weight-bold: 700; /* figma: type/font-weight/font-weight-bold */
-
   /* Font Sizes */
   --text-xs: 10px; /* figma: type/font-size/font-size-25 */
   --text-sm: 13px; /* figma: type/font-size/font-size-50 */
@@ -30,9 +22,17 @@
   --text-4xl: 49px; /* figma: type/font-size/font-size-600 */
   --text-5xl: 61px; /* figma: type/font-size/font-size-700 */
 
-  /* Line Heights */
-  --leading-tight: 1.25;
-  --leading-normal: 1.5;
+  /* Font Families */
+  --font-sans: Inter; /* figma: type/font-family/font-family-default */
+  --font-display: "GT Planar"; /* figma: type/font-family/font-family-emphasised */
+
+  /* Font Weights */
+  --font-weight-regular: 400; /* figma: type/font-weight/font-weight-regular */
+  --font-weight-bold: 700; /* figma: type/font-weight/font-weight-bold */
+
+  /* Font Variation Settings */
+  --slnt-positive: 30; /* figma: type/font-style/font-style-emphasised-positive */
+  --slnt-negative: -30; /* figma: type/font-style/font-style-emphasised-negative */
 
   /* Sizes */
   --size-0-5: 2px; /* figma: size/size-25 */
@@ -52,16 +52,16 @@
   --size-22: 88px; /* figma: size/size-22 */
   --size-24: 96px; /* figma: size/size-24 */
 
-  /* Font Variation Settings */
-  --slnt-positive: 30; /* figma: type/font-style/font-style-emphasised-positive */
-  --slnt-negative: -30; /* figma: type/font-style/font-style-emphasised-negative */
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
 
   /* ===== SEMANTICS ===== */
-  /* No semantic tokens defined in the design system */
+  /* (No semantic tokens defined in current design system) */
 
   /* ===== COMPONENTS ===== */
   
   /* Button */
-  --button-text-color: var(--color-white); /* Default button text color */
-  --button-bg-color: var(--color-digital-blue); /* Default button background */
+  --button-text-color: var(--color-white);
+  --button-bg-color: var(--color-digital-blue);
 }

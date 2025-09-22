@@ -29,5 +29,5 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "fallbacks/Button.tsx", "fallbacks/Headline.tsx"]
 }

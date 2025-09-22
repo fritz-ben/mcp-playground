@@ -1,73 +1,58 @@
-/* Text Style Utility Classes */
+/* ===== TEXT STYLE UTILITIES ===== */
 
-/* Font Variation Utilities */
-.slnt-positive {
+/* Font Variation Settings Utilities */
+@utility slnt-positive {
   font-variation-settings: "slnt" var(--slnt-positive);
 }
 
-.slnt-negative {
+@utility slnt-negative {
   font-variation-settings: "slnt" var(--slnt-negative);
 }
 
 /* Title Styles */
-.title-1-italic {
-  @apply slnt-positive text-5xl/tight font-display;
-  font-weight: var(--font-normal);
-  /* figma: Title/Title-1-Italic */
+@utility title-1-italic {
+  @apply text-5xl leading-tight font-display font-regular slnt-positive;
 }
 
-.title-1-retalic {
-  @apply slnt-negative text-5xl/tight font-display;
-  font-weight: var(--font-normal);
-  /* figma: Title/Title-1-Retalic */
+@utility title-1-retalic {
+  @apply text-5xl leading-tight font-display font-regular slnt-negative;
 }
 
-.title-2-italic {
-  @apply slnt-positive text-4xl/tight font-display;
-  font-weight: var(--font-normal);
-  /* figma: Title/Title-2-Italic */
+@utility title-2-italic {
+  @apply text-4xl leading-tight font-display font-regular slnt-positive;
 }
 
-.title-2-retalic {
-  @apply slnt-negative text-4xl/tight font-display;
-  font-weight: var(--font-normal);
-  /* figma: Title/Title-2-Retalic */
+@utility title-2-retalic {
+  @apply text-4xl leading-tight font-display font-regular slnt-negative;
 }
 
 /* Heading Styles */
-.heading-1 {
-  @apply text-3xl/tight font-sans;
-  font-weight: var(--font-bold);
-  /* figma: Heading/Heading-1 */
+@utility heading-1 {
+  @apply text-3xl leading-tight font-sans font-bold;
 }
 
-.heading-2 {
-  @apply text-2xl/tight font-sans;
-  font-weight: var(--font-bold);
-  /* figma: Heading/Heading-2 */
+@utility heading-2 {
+  @apply text-2xl leading-tight font-sans font-bold;
 }
 
-.heading-3 {
-  @apply text-xl/tight font-sans;
-  font-weight: var(--font-bold);
-  /* figma: Heading/Heading-3 */
+@utility heading-3 {
+  @apply text-xl leading-tight font-sans font-bold;
 }
 
 /* Body Text Styles */
-.body-large {
-  @apply text-lg/normal font-sans;
-  font-weight: var(--font-normal);
-  /* figma: Body/Body-large */
+@utility body-large {
+  @apply text-lg leading-normal font-sans font-regular;
 }
 
-.body-base {
-  @apply text-base/normal font-sans;
-  font-weight: var(--font-normal);
-  /* figma: Body/Body-base */
+@utility body-base {
+  @apply text-base leading-normal font-sans font-regular;
 }
 
-.body-small {
-  @apply text-sm/normal font-sans;
-  font-weight: var(--font-normal);
-  /* figma: Body/Body-small */
+@utility body-small {
+  @apply text-sm leading-normal font-sans font-regular;
+}
+
+/* Component Text Styles */
+@utility button-text {
+  @apply text-base leading-normal font-sans font-bold;
 }

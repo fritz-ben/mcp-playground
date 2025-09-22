@@ -16,28 +16,12 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "nursery": {
-        "useCssSuppressionComment": "off"
-      },
-      "suspicious": {
-        "noUnknownFunction": "off"
-      }
+      "recommended": true
     }
   },
   "css": {
     "linter": {
-      "enabled": true,
-      "rules": {
-        "recommended": true,
-        "correctness": {
-          "noUnknownAtRule": "off"
-        },
-        "suspicious": {
-          "noShorthandPropertyOverrides": "off",
-          "noDuplicateProperties": "off"
-        }
-      }
+      "enabled": true
     }
   },
   "javascript": {

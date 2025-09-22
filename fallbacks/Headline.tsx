@@ -3,53 +3,49 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { clsx } from 'clsx';
 
 const headlineVariants = cva(
+  // Base classes
   [
-    'flex',
-    'items-center',
-    'justify-center',
-    'relative',
-    'w-full',
+    'title-2-italic', // Uses design token text style
+    'transition-all',
+    'duration-300',
+    'ease-[cubic-bezier(0.4,0,0.2,1)]', // Smooth cubic-bezier transition
+    'hover:title-2-retalic', // Hover effect with retalic style
+    'cursor-pointer',
   ],
   {
     variants: {
-      alignment: {
-        left: 'justify-start text-left',
-        center: 'justify-center text-center',
-        right: 'justify-end text-right',
+      align: {
+        left: 'text-left',
+        center: 'text-center',
+        right: 'text-right',
       },
     },
     defaultVariants: {
-      alignment: 'center',
+      align: 'center',
     },
   }
 );
 
-interface HeadlineProps extends VariantProps<typeof headlineVariants> {
+export interface HeadlineProps
+  extends React.HTMLAttributes<HTMLHeadingElement>,
+    VariantProps<typeof headlineVariants> {
+  /** The text content of the headline */
   children: React.ReactNode;
-  className?: string;
 }
 
 export const Headline: React.FC<HeadlineProps> = ({
   children,
-  alignment,
+  align,
   className,
+  ...props
 }) => {
   return (
-    <div className={clsx(headlineVariants({ alignment }), className)}>
-      <h2
-        className={clsx(
-          'flex-grow',
-          'basis-0',
-          'min-h-px',
-          'min-w-px',
-          'title-1-italic hover:title-1-retalic',
-          'transition-all',
-          'ease-[cubic-bezier(0.4,0,0.2,1)]',
-        )}
-      >
-        {children}
-      </h2>
-    </div>
+    <h2
+      className={clsx(headlineVariants({ align }), className)}
+      {...props}
+    >
+      {children}
+    </h2>
   );
 };
 
