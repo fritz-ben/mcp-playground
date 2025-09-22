@@ -1,52 +1,30 @@
-import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { clsx } from 'clsx';
+import { cva, type VariantProps } from "class-variance-authority";
+import type { HTMLAttributes, ReactNode } from "react";
 
 const headlineVariants = cva(
-  // Base classes
-  [
-    'title-2-italic', // Uses design token text style
-    'transition-all',
-    'duration-300',
-    'ease-[cubic-bezier(0.4,0,0.2,1)]', // Smooth cubic-bezier transition
-    'hover:title-2-retalic', // Hover effect with retalic style
-    'cursor-pointer',
-  ],
+  "title-2-italic transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:title-2-retalic",
   {
     variants: {
       align: {
-        left: 'text-left',
-        center: 'text-center',
-        right: 'text-right',
+        left: "text-left",
+        center: "text-center",
+        right: "text-right",
       },
     },
     defaultVariants: {
-      align: 'center',
+      align: "center",
     },
-  }
+  },
 );
 
-export interface HeadlineProps
-  extends React.HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof headlineVariants> {
-  /** The text content of the headline */
-  children: React.ReactNode;
+export interface HeadlineProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headlineVariants> {
+  children: ReactNode;
 }
 
-export const Headline: React.FC<HeadlineProps> = ({
-  children,
-  align,
-  className,
-  ...props
-}) => {
+export default function Headline({ children, align, className, ...props }: HeadlineProps) {
   return (
-    <h2
-      className={clsx(headlineVariants({ align }), className)}
-      {...props}
-    >
+    <h2 className={headlineVariants({ align, className })} {...props}>
       {children}
     </h2>
   );
-};
-
-export default Headline;
+}

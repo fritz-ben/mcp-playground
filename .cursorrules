@@ -39,3 +39,5 @@
 - ALWAYS use Tailwind default utilities for pixel-based values.
   EXAMPLE: Instead of rounded-[8px], use "rounded-lg
 - Export react components as default
+- NEVER create any kind of demo to test the new component
+- NEVER touch the App.tsx to demonstrate the new component

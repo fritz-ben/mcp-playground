@@ -1,7 +1,7 @@
 import "./styles/fonts.css";
 
 function App() {
-  return <main>Inspire: Figma MCP Demo</main>;
+  return <main className="flex items-center justify-center text-4xl font-black">Hi Inspire! 👋</main>;
 }
 
 export default App;

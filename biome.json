@@ -21,7 +21,12 @@
   },
   "css": {
     "linter": {
-      "enabled": true
+      "enabled": true,
+      "rules": {
+        "style": {
+          "noUnknownAtRules": "off"
+        }
+      }
     }
   },
   "javascript": {

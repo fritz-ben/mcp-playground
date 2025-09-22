@@ -33,24 +33,24 @@ Show me the exact code that the ‘get_code’ tool returns.
 ***
 
 Create a production-ready Button component in @/components/Button.tsx with the following requirements:
-- Include only the variants and states that exist in Figma.
+- Include only the variants and states that exist in Figma
 - Create a button text style in @typo.css
-- Use Class Variance Authority (CVA) to structure Tailwind classes.
+- Use Class Variance Authority (CVA) to structure Tailwind classes
 - Accept children as the button label.- The component state should be implement with hover:- Follow the “Writing component code” rules
 
 ***
 
-Inspect the title-2 / centered component instance and provide a detailed description of its structure and styling.
+Inspect the title-2 / centered component instance and provide a detailed description of its structure and styling. Identify where this component applies elements from our design system.
 
 ***
 
 Create a production-ready Headline component in @/components/Headline.tsx with the following requirements:
 
-- Support only the h2 level for now.
+- Support only the h2 level for now
 - Use the existing text style from @typo.css
 - Handle the transition separate from the text styles 
 - Include the defined hover effect with a smooth cubic-bezier transition.
-- Provide a property to control text alignment.
+- Provide a property to control text alignment
 - Follow the “Writing component code” rules
 
 ***
@@ -59,7 +59,7 @@ Open the page with node-id 1:99, download the image named inspire-hero-title, an
 
 ***
 
-Implement the hero-stage on page 13-502 directly in @src/App.tsx with the following requirements:
+Implement the hero-stage (node: 31-1159) directly in @src/App.tsx with the following requirements:
 - Use the existing Headline and Button components.
 - Replace the existing content with the hero-stage content.
 - Use @src/assets/images/inspire-logo.png as the hero image.

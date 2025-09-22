@@ -11,8 +11,10 @@ const buttonVariants = cva(
         primary: "",
       },
       state: {
-        default: "bg-(--color-bluish-white-100) text-(--color-deep-blue) border-(--color-bluish-white-100) hover:bg-transparent hover:text-(--color-bluish-white-100) hover:border-(--color-bluish-white-100) focus:ring-(--color-deep-blue)",
-        hover: "bg-transparent text-(--color-bluish-white-100) border-(--color-bluish-white-100) hover:bg-(--color-bluish-white-100) hover:text-(--color-deep-blue) focus:ring-(--color-bluish-white-100)",
+        default:
+          "bg-(--color-bluish-white-100) text-(--color-deep-blue) border-(--color-bluish-white-100) hover:bg-transparent hover:text-(--color-bluish-white-100) hover:border-(--color-bluish-white-100) focus:ring-(--color-deep-blue)",
+        hover:
+          "bg-transparent text-(--color-bluish-white-100) border-(--color-bluish-white-100) hover:bg-(--color-bluish-white-100) hover:text-(--color-deep-blue) focus:ring-(--color-bluish-white-100)",
       },
       disabled: {
         true: "bg-gray-200 text-gray-400 border-gray-200 cursor-not-allowed",
